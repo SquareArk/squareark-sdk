@@ -1,8 +1,8 @@
 {
-  "name": "@saleor/sdk",
+  "name": "@squareark/sdk",
   "version": "0.1.5",
   "description": "This package contains all queries and mutations that are used in our sample storefront. It can be used for semi-custom or fully-custom (with ability to extend existing queries) storefront solutions.",
-  "homepage": "https://getsaleor.com/",
+  "homepage": "https://squareArk.com/",
   "main": "./lib/index.js",
   "license": "BSD-3-Clause",
   "engines": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/mirumee/saleor-sdk.git"
+    "url": "git://github.com/squareark/squareark-sdk.git"
   },
   "scripts": {
     "build": "tsc",
