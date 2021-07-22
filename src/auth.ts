@@ -66,7 +66,11 @@ export const authLink = setContext((_, context) => {
       ...context,
       headers: {
         ...context.headers,
-        "Access-Control-Allow-Headers": "Origin-Store",
+        "Access-Control-Allow-Headers": `${
+          context.headers["Access-Control-Allow-Headers"]
+            ? `${context.headers["Access-Control-Allow-Headers"]} `
+            : ""
+        }origin-store`,
         Authorization: authToken ? `JWT ${authToken}` : null,
         "Origin-Store": localStorage.getItem("store-id")
           ? localStorage.getItem("store-id")
@@ -78,7 +82,11 @@ export const authLink = setContext((_, context) => {
     ...context,
     headers: {
       ...context.headers,
-      "Access-Control-Allow-Headers": "Origin-Store",
+      "Access-Control-Allow-Headers": `${
+        context.headers["Access-Control-Allow-Headers"]
+          ? `${context.headers["Access-Control-Allow-Headers"]} `
+          : ""
+      }origin-store`,
       "Origin-Store": localStorage.getItem("store-id")
         ? localStorage.getItem("store-id")
         : "",
