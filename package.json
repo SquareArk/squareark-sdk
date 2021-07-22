@@ -1,6 +1,6 @@
 {
   "name": "@squareark/sdk",
-  "version": "0.1.5",
+  "version": "1.0.0",
   "description": "This package contains all queries and mutations that are used in our sample storefront. It can be used for semi-custom or fully-custom (with ability to extend existing queries) storefront solutions.",
   "homepage": "https://squareArk.com/",
   "main": "./lib/index.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/squareark/squareark-sdk.git"
+    "url": "git://github.com/SquareArk/squareark-sdk.git"
   },
   "scripts": {
     "build": "tsc",
@@ -31,7 +31,7 @@
     "apollo",
     "graphql"
   ],
-  "author": "Mirumee",
+  "author": "SquareArk",
   "dependencies": {
     "apollo-cache": "^1.3.5",
     "apollo-cache-inmemory": "^1.6.6",
@@ -114,5 +114,11 @@
     "react-apollo": "^3.1.5"
   },
   "type": "commonjs",
-  "typings": "./lib/index.d.ts"
+  "typings": "./lib/index.d.ts",
+  "bugs": {
+    "url": "https://github.com/squareark/squareark-sdk/issues"
+  },
+  "directories": {
+    "lib": "lib"
+  }
 }
