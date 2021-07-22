@@ -66,9 +66,22 @@ export const authLink = setContext((_, context) => {
       ...context,
       headers: {
         ...context.headers,
+        "Access-Control-Allow-Headers": "Origin-Store",
         Authorization: authToken ? `JWT ${authToken}` : null,
+        "Origin-Store": localStorage.getItem("store-id")
+          ? localStorage.getItem("store-id")
+          : "",
       },
     };
   }
-  return context;
+  return {
+    ...context,
+    headers: {
+      ...context.headers,
+      "Access-Control-Allow-Headers": "Origin-Store",
+      "Origin-Store": localStorage.getItem("store-id")
+        ? localStorage.getItem("store-id")
+        : "",
+    },
+  };
 });
