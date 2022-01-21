@@ -444,6 +444,10 @@ export interface UpdateCheckoutShippingMethod_checkoutShippingMethodUpdate_check
   id: string;
   name: string;
   /**
+   * brand
+   */
+  brand: string | null;
+  /**
    * The main thumbnail for a product.
    */
   thumbnail: UpdateCheckoutShippingMethod_checkoutShippingMethodUpdate_checkout_lines_variant_product_thumbnail | null;

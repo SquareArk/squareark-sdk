@@ -444,6 +444,10 @@ export interface AddCheckoutPromoCode_checkoutAddPromoCode_checkout_lines_varian
   id: string;
   name: string;
   /**
+   * brand
+   */
+  brand: string | null;
+  /**
    * The main thumbnail for a product.
    */
   thumbnail: AddCheckoutPromoCode_checkoutAddPromoCode_checkout_lines_variant_product_thumbnail | null;

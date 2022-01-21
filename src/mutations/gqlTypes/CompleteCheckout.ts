@@ -232,6 +232,10 @@ export interface CompleteCheckout_checkoutComplete_order_lines_variant_product {
   id: string;
   name: string;
   /**
+   * brand
+   */
+  brand: string | null;
+  /**
    * The main thumbnail for a product.
    */
   thumbnail: CompleteCheckout_checkoutComplete_order_lines_variant_product_thumbnail | null;

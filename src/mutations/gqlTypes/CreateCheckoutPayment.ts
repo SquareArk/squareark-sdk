@@ -444,6 +444,10 @@ export interface CreateCheckoutPayment_checkoutPaymentCreate_checkout_lines_vari
   id: string;
   name: string;
   /**
+   * brand
+   */
+  brand: string | null;
+  /**
    * The main thumbnail for a product.
    */
   thumbnail: CreateCheckoutPayment_checkoutPaymentCreate_checkout_lines_variant_product_thumbnail | null;

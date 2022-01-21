@@ -172,6 +172,10 @@ export interface CheckoutProductVariants_productVariants_edges_node_product {
   id: string;
   name: string;
   /**
+   * brand
+   */
+  brand: string | null;
+  /**
    * The main thumbnail for a product.
    */
   thumbnail: CheckoutProductVariants_productVariants_edges_node_product_thumbnail | null;

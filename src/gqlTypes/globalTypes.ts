@@ -86,6 +86,7 @@ export enum CollectionSortField {
   AVAILABILITY = "AVAILABILITY",
   NAME = "NAME",
   PRODUCT_COUNT = "PRODUCT_COUNT",
+  PUBLICATION_DATE = "PUBLICATION_DATE",
 }
 
 /**
@@ -403,10 +404,13 @@ export enum PaymentErrorCode {
 }
 
 export enum ProductOrderField {
+  COLLECTION = "COLLECTION",
   DATE = "DATE",
   MINIMAL_PRICE = "MINIMAL_PRICE",
   NAME = "NAME",
   PRICE = "PRICE",
+  PRICE_CUSTOMER = "PRICE_CUSTOMER",
+  PUBLICATION_DATE = "PUBLICATION_DATE",
   PUBLISHED = "PUBLISHED",
   TYPE = "TYPE",
 }
@@ -458,6 +462,7 @@ export interface CheckoutLineInput {
 export interface CollectionFilterInput {
   published?: CollectionPublished | null;
   search?: string | null;
+  filterableInDashboard?: boolean | null;
   ids?: (string | null)[] | null;
 }
 
@@ -494,9 +499,13 @@ export interface ProductFilterInput {
   productType?: string | null;
   stocks?: ProductStockFilterInput | null;
   search?: string | null;
+  store?: (string | null)[] | null;
+  ambassadorStore?: string | null;
+  onlyVisible?: boolean | null;
   price?: PriceRangeInput | null;
   minimalPrice?: PriceRangeInput | null;
   productTypes?: (string | null)[] | null;
+  ids?: (string | null)[] | null;
 }
 
 export interface ProductOrder {

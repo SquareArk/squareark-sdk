@@ -444,6 +444,10 @@ export interface RemoveCheckoutPromoCode_checkoutRemovePromoCode_checkout_lines_
   id: string;
   name: string;
   /**
+   * brand
+   */
+  brand: string | null;
+  /**
    * The main thumbnail for a product.
    */
   thumbnail: RemoveCheckoutPromoCode_checkoutRemovePromoCode_checkout_lines_variant_product_thumbnail | null;

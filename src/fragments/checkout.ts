@@ -66,6 +66,7 @@ export const checkoutProductVariantFragment = gql`
     product {
       id
       name
+      brand
       thumbnail {
         url
         alt
@@ -78,6 +79,7 @@ export const checkoutProductVariantFragment = gql`
         isShippingRequired
       }
     }
+    quantityAvailable
   }
 `;
 

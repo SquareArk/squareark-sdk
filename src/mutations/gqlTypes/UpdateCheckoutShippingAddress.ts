@@ -461,6 +461,10 @@ export interface UpdateCheckoutShippingAddress_checkoutShippingAddressUpdate_che
   id: string;
   name: string;
   /**
+   * brand
+   */
+  brand: string | null;
+  /**
    * The main thumbnail for a product.
    */
   thumbnail: UpdateCheckoutShippingAddress_checkoutShippingAddressUpdate_checkout_lines_variant_product_thumbnail | null;
@@ -1050,6 +1054,10 @@ export interface UpdateCheckoutShippingAddress_checkoutEmailUpdate_checkout_line
    */
   id: string;
   name: string;
+  /**
+   * brand
+   */
+  brand: string | null;
   /**
    * The main thumbnail for a product.
    */

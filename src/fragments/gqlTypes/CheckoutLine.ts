@@ -208,6 +208,10 @@ export interface CheckoutLine_variant_product {
   id: string;
   name: string;
   /**
+   * brand
+   */
+  brand: string | null;
+  /**
    * The main thumbnail for a product.
    */
   thumbnail: CheckoutLine_variant_product_thumbnail | null;

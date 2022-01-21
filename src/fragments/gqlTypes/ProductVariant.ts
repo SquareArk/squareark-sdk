@@ -172,6 +172,10 @@ export interface ProductVariant_product {
   id: string;
   name: string;
   /**
+   * brand
+   */
+  brand: string | null;
+  /**
    * The main thumbnail for a product.
    */
   thumbnail: ProductVariant_product_thumbnail | null;

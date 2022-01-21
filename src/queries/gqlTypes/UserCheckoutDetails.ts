@@ -442,6 +442,10 @@ export interface UserCheckoutDetails_me_checkout_lines_variant_product {
   id: string;
   name: string;
   /**
+   * brand
+   */
+  brand: string | null;
+  /**
    * The main thumbnail for a product.
    */
   thumbnail: UserCheckoutDetails_me_checkout_lines_variant_product_thumbnail | null;
