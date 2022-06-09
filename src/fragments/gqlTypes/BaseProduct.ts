@@ -38,6 +38,10 @@ export interface BaseProduct {
   seoDescription: string | null;
   seoTitle: string | null;
   /**
+   * which product is top in sale.
+   */
+  bestSeller: boolean | null;
+  /**
    * The main thumbnail for a product.
    */
   thumbnail: BaseProduct_thumbnail | null;

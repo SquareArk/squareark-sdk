@@ -1,6 +1,6 @@
 {
   "name": "@squareark-sdk/sdk",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "This package contains all queries and mutations that are used in our sample storefront. It can be used for semi-custom or fully-custom (with ability to extend existing queries) storefront solutions.",
   "homepage": "https://squareArk.com/",
   "main": "./lib/index.js",
@@ -64,7 +64,9 @@
     "@types/webappsec-credential-management": "^0.5.1",
     "@typescript-eslint/eslint-plugin": "^5.12.1",
     "@typescript-eslint/parser": "^5.12.1",
-    "apollo": "^2.27.4",
+    "apollo": "2.33.4",
+    "apollo-codegen-core": "0.40.3",
+    "apollo-language-server": "1.26.3",
     "apollo-client": "^2.6.10",
     "apollo-link": "^1.2.14",
     "eslint": "^7.0.0",
@@ -94,19 +96,6 @@
     "setup-polly-jest": "^0.8.0",
     "ts-jest": "^26.0.0",
     "typescript": "^3.9.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "npm run build"
-    }
-  },
-  "lint-staged": {
-    "*.{js,ts}": [
-      "eslint --fix",
-      "prettier --write",
-      "git add"
-    ]
   },
   "peerDependencies": {
     "apollo-client": "^2.6.10",

@@ -404,14 +404,20 @@ export enum PaymentErrorCode {
 }
 
 export enum ProductOrderField {
+  BRAND = "BRAND",
   COLLECTION = "COLLECTION",
+  COMMISSION = "COMMISSION",
+  CREATED_DATE = "CREATED_DATE",
   DATE = "DATE",
+  DISCOUNT = "DISCOUNT",
   MINIMAL_PRICE = "MINIMAL_PRICE",
   NAME = "NAME",
   PRICE = "PRICE",
   PRICE_CUSTOMER = "PRICE_CUSTOMER",
   PUBLICATION_DATE = "PUBLICATION_DATE",
   PUBLISHED = "PUBLISHED",
+  RELEVANT = "RELEVANT",
+  SEARCH = "SEARCH",
   TYPE = "TYPE",
 }
 
@@ -491,18 +497,23 @@ export interface PriceRangeInput {
 
 export interface ProductFilterInput {
   isPublished?: boolean | null;
+  inDemand?: boolean | null;
   collections?: (string | null)[] | null;
   categories?: (string | null)[] | null;
   hasCategory?: boolean | null;
   attributes?: (AttributeInput | null)[] | null;
   stockAvailability?: StockAvailability | null;
   productType?: string | null;
+  inStock?: boolean | null;
   stocks?: ProductStockFilterInput | null;
   search?: string | null;
+  onlyVisible?: boolean | null;
   store?: (string | null)[] | null;
   ambassadorStore?: string | null;
-  onlyVisible?: boolean | null;
+  onlyEnabled?: string | null;
   price?: PriceRangeInput | null;
+  customerPrice?: PriceRangeInput | null;
+  ambassadorPrice?: PriceRangeInput | null;
   minimalPrice?: PriceRangeInput | null;
   productTypes?: (string | null)[] | null;
   ids?: (string | null)[] | null;

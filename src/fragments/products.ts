@@ -8,6 +8,7 @@ export const baseProductFragment = gql`
     slug
     seoDescription
     seoTitle
+    bestSeller
     thumbnail {
       url
       alt

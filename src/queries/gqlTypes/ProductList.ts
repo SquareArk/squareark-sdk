@@ -224,6 +224,10 @@ export interface ProductList_products_edges_node {
   seoDescription: string | null;
   seoTitle: string | null;
   /**
+   * which product is top in sale.
+   */
+  bestSeller: boolean | null;
+  /**
    * The main thumbnail for a product.
    */
   thumbnail: ProductList_products_edges_node_thumbnail | null;

@@ -10,7 +10,11 @@
   "parserOptions": {
     "project": "./tsconfig.eslint.json"
   },
-  "plugins": ["import", "react", "prettier"],
+  "plugins": [
+    "import",
+    "react",
+    "prettier"
+  ],
   "rules": {
     "comma-spacing": "off",
     "sort-keys": "error",
@@ -20,7 +24,9 @@
     "import/no-named-as-default": "off",
     "import/prefer-default-export": "off",
     "import/order": "error",
-    "prettier/prettier": ["error"],
+    "prettier/prettier": [
+      "error"
+    ],
     "react/jsx-one-expression-per-line": "off",
     "react/jsx-props-no-spreading": "off",
     "react/jsx-wrap-multilines": "off",
@@ -32,7 +38,18 @@
     "no-async-promise-executor": "warn",
     "import/no-extraneous-dependencies": [
       "error",
-      { "devDependencies": ["testUtils/*.ts", "**/*.test.ts", "**/*.test.tsx"] }
+      {
+        "devDependencies": [
+          "testUtils/*.ts",
+          "**/*.test.ts",
+          "**/*.test.tsx"
+        ]
+      }
+    ],
+    // note you must disable the base rule as it can report incorrect errors
+    "no-loss-of-precision": "off",
+    "@typescript-eslint/no-loss-of-precision": [
+      "error"
     ]
   }
 }

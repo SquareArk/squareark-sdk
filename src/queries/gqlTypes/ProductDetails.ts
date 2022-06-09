@@ -437,6 +437,10 @@ export interface ProductDetails_product_category_products_edges_node {
   seoDescription: string | null;
   seoTitle: string | null;
   /**
+   * which product is top in sale.
+   */
+  bestSeller: boolean | null;
+  /**
    * The main thumbnail for a product.
    */
   thumbnail: ProductDetails_product_category_products_edges_node_thumbnail | null;
@@ -714,6 +718,10 @@ export interface ProductDetails_product {
   slug: string;
   seoDescription: string | null;
   seoTitle: string | null;
+  /**
+   * which product is top in sale.
+   */
+  bestSeller: boolean | null;
   /**
    * The main thumbnail for a product.
    */
