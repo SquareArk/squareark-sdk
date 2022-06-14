@@ -1,7 +1,15 @@
 import gql from "graphql-tag";
 import { checkoutPriceFragment } from "./checkout";
 
+export const productBasicTranslationFragment = gql`
+  fragment ProductBasicTranslationFragment on ProductTranslation {
+    id
+    name
+  }
+`;
+
 export const baseProductFragment = gql`
+  ${productBasicTranslationFragment}
   fragment BaseProduct on Product {
     id
     name
@@ -15,6 +23,9 @@ export const baseProductFragment = gql`
     }
     thumbnail2x: thumbnail(size: 510) {
       url
+    }
+    translation(languageCode: $languageCode) {
+      ...ProductBasicTranslationFragment
     }
   }
 `;
