@@ -6,7 +6,7 @@ import { ErrorCartTypes } from "../../jobs/Cart";
 import { SaleorState, SaleorStateLoaded } from "../../state";
 import { ISaleorStateSummeryPrices, StateItems } from "../../state/types";
 import { ApolloClientManager } from "../../data/ApolloClientManager";
-// import { sortCheckoutLines } from "./utils";
+import { sortCheckoutLines } from "./utils";
 
 import {
   IDiscount,
@@ -58,7 +58,7 @@ export class SaleorCartAPI extends ErrorListener {
       (checkout: ICheckoutModel) => {
         this.items = checkout?.lines
           ?.filter(line => line.quantity > 0)
-        // .sort(sortCheckoutLines);
+          .sort(sortCheckoutLines);
       }
     );
     this.saleorState.subscribeToChange(

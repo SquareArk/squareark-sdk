@@ -1,6 +1,6 @@
 {
   "name": "@squareark-sdk/sdk",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "description": "This package contains all queries and mutations that are used in our sample storefront. It can be used for semi-custom or fully-custom (with ability to extend existing queries) storefront solutions.",
   "homepage": "https://squareArk.com/",
   "main": "./lib/index.js",
