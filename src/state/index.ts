@@ -226,7 +226,7 @@ export class SaleorState extends NamedObservable<StateItems> {
   };
 
   private static calculateSummaryPrices(
-    checkout?: ICheckoutModel
+    checkout?: any
   ): ISaleorStateSummeryPrices {
     const items = checkout?.lines;
     const shippingMethod = checkout?.shippingMethod;
@@ -245,13 +245,17 @@ export class SaleorState extends NamedObservable<StateItems> {
         };
 
         const itemsNetPrice = items.reduce(
-          (accumulatorPrice, line) =>
-            accumulatorPrice + (line.totalPrice?.net.amount || 0),
+          (
+            accumulatorPrice: any,
+            line: { totalPrice: { net: { amount: any } } }
+          ) => accumulatorPrice + (line.totalPrice?.net.amount || 0),
           0
         );
         const itemsGrossPrice = items.reduce(
-          (accumulatorPrice, line) =>
-            accumulatorPrice + (line.totalPrice?.gross?.amount || 0),
+          (
+            accumulatorPrice: any,
+            line: { totalPrice: { gross: { amount: any } } }
+          ) => accumulatorPrice + (line.totalPrice?.gross?.amount || 0),
           0
         );
 
@@ -279,14 +283,18 @@ export class SaleorState extends NamedObservable<StateItems> {
           gross: {
             ...subtotalPrice.gross,
             amount: round(
-              itemsGrossPrice + shippingPrice.amount - discount.amount,
+              parseFloat(itemsGrossPrice) +
+              shippingPrice.amount -
+              discount.amount,
               2
             ),
           },
           net: {
             ...subtotalPrice.net,
             amount: round(
-              itemsNetPrice + shippingPrice.amount - discount.amount,
+              parseFloat(itemsNetPrice) +
+              shippingPrice.amount -
+              discount.amount,
               2
             ),
           },
