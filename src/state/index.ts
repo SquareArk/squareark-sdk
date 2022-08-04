@@ -238,7 +238,7 @@ export class SaleorState extends NamedObservable<StateItems> {
       if (firstItemTotalPrice) {
         const shippingPrice = {
           ...shippingMethod?.price,
-          amount: shippingMethod?.price?.amount || 0,
+          amount: parseFloat(shippingMethod?.price?.amount || 0),
           currency:
             shippingMethod?.price?.currency ||
             firstItemTotalPrice.gross.currency,
@@ -246,16 +246,20 @@ export class SaleorState extends NamedObservable<StateItems> {
 
         const itemsNetPrice = items.reduce(
           (
-            accumulatorPrice: any,
+            accumulatorPrice: string,
             line: { totalPrice: { net: { amount: any } } }
-          ) => accumulatorPrice + (line.totalPrice?.net.amount || 0),
+          ) =>
+            parseFloat(accumulatorPrice) +
+            parseFloat(line.totalPrice?.net.amount || 0),
           0
         );
         const itemsGrossPrice = items.reduce(
           (
-            accumulatorPrice: any,
+            accumulatorPrice: string,
             line: { totalPrice: { gross: { amount: any } } }
-          ) => accumulatorPrice + (line.totalPrice?.gross?.amount || 0),
+          ) =>
+            parseFloat(accumulatorPrice) +
+            parseFloat(line.totalPrice?.gross?.amount || 0),
           0
         );
 
@@ -284,8 +288,8 @@ export class SaleorState extends NamedObservable<StateItems> {
             ...subtotalPrice.gross,
             amount: round(
               parseFloat(itemsGrossPrice) +
-              shippingPrice.amount -
-              discount.amount,
+              parseFloat(shippingPrice.amount) -
+              parseFloat(discount.amount),
               2
             ),
           },
@@ -293,8 +297,8 @@ export class SaleorState extends NamedObservable<StateItems> {
             ...subtotalPrice.net,
             amount: round(
               parseFloat(itemsNetPrice) +
-              shippingPrice.amount -
-              discount.amount,
+              parseFloat(shippingPrice.amount) -
+              parseFloat(discount.amount),
               2
             ),
           },
