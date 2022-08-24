@@ -2,12 +2,12 @@ import { act, renderHook } from "@testing-library/react-hooks";
 import React from "react";
 import { ApolloProvider } from "react-apollo";
 import { setupRecording, setupAPI } from "../../../testUtils/api";
-import { useCollectionDetails, useCollectionList } from "./collections";
 import {
   OrderDirection,
   CollectionSortField,
 } from "../../gqlTypes/globalTypes";
 import * as fixtures from "../../api/collections/fixtures";
+import { useCollectionDetails, useCollectionList } from "./collections";
 
 setupRecording();
 

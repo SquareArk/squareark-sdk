@@ -11,5 +11,7 @@ const useHook = <T extends keyof SaleorAPI>(dataName: T): SaleorAPI[T] => {
   return getHookData();
 };
 
-export const hookFactory = <T extends keyof SaleorAPI>(query: T) => () =>
-  useHook(query);
+export const hookFactory =
+  <T extends keyof SaleorAPI>(query: T) =>
+  () =>
+    useHook(query);

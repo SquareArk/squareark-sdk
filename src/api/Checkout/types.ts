@@ -50,6 +50,7 @@ export interface IPayment {
 }
 
 export interface ICheckout {
+  note?: any;
   id?: string;
   token: any;
   email?: string;

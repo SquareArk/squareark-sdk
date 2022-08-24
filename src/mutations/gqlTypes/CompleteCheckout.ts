@@ -72,7 +72,7 @@ export interface CompleteCheckout_checkoutComplete_order_lines_variant_pricing_p
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -84,7 +84,7 @@ export interface CompleteCheckout_checkoutComplete_order_lines_variant_pricing_p
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -108,7 +108,7 @@ export interface CompleteCheckout_checkoutComplete_order_lines_variant_pricing_p
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -120,7 +120,7 @@ export interface CompleteCheckout_checkoutComplete_order_lines_variant_pricing_p
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -278,7 +278,7 @@ export interface CompleteCheckout_checkoutComplete_order_lines_unitPrice_gross {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -290,7 +290,7 @@ export interface CompleteCheckout_checkoutComplete_order_lines_unitPrice_net {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -318,7 +318,7 @@ export interface CompleteCheckout_checkoutComplete_order_lines_totalPrice_gross 
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -330,7 +330,7 @@ export interface CompleteCheckout_checkoutComplete_order_lines_totalPrice_net {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -376,7 +376,7 @@ export interface CompleteCheckout_checkoutComplete_order_subtotal_gross {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -388,7 +388,7 @@ export interface CompleteCheckout_checkoutComplete_order_subtotal_net {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -412,7 +412,7 @@ export interface CompleteCheckout_checkoutComplete_order_total_gross {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -424,7 +424,7 @@ export interface CompleteCheckout_checkoutComplete_order_total_net {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -448,7 +448,7 @@ export interface CompleteCheckout_checkoutComplete_order_shippingPrice_gross {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -460,7 +460,7 @@ export interface CompleteCheckout_checkoutComplete_order_shippingPrice_net {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */

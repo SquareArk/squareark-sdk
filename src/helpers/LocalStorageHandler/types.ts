@@ -108,6 +108,7 @@ export interface ICheckoutModel {
   id?: string;
   token?: any;
   email?: string;
+  note?: string | null;
   shippingAddress?: ICheckoutAddress | null;
   billingAddress?: ICheckoutAddress | null;
   selectedShippingAddressId?: string;

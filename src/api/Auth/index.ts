@@ -5,9 +5,9 @@ import { SaleorState, SaleorStateLoaded } from "../../state";
 import { StateItems } from "../../state/types";
 
 import { PromiseRunResponse } from "../types";
-import { DataErrorAuthTypes } from "./types";
 import { Config } from "../../types";
 import { CREDENTIAL_API_EXISTS } from "../../consts";
+import { DataErrorAuthTypes } from "./types";
 
 export const BROWSER_NO_CREDENTIAL_API_MESSAGE =
   "Saleor SDK is unable to use browser Credential Management API.";
@@ -157,7 +157,10 @@ export class AuthAPI extends ErrorListener {
     );
 
     if (dataError?.error) {
-      this.fireError(dataError.error, DataErrorAuthTypes.RESET_PASSWORD_REQUEST);
+      this.fireError(
+        dataError.error,
+        DataErrorAuthTypes.RESET_PASSWORD_REQUEST,
+      );
     }
 
     if (dataError) {
@@ -212,10 +215,8 @@ export class AuthAPI extends ErrorListener {
       };
     }
 
-    const {
-      data: userData,
-      dataError: userDataError,
-    } = await this.jobsManager.run("auth", "provideUser", undefined);
+    const { data: userData, dataError: userDataError } =
+      await this.jobsManager.run("auth", "provideUser", undefined);
     if (this.config.loadOnStart.checkout) {
       await this.jobsManager.run("checkout", "provideCheckout", {
         isUserSignedIn: !!data?.user,

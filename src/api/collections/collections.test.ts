@@ -1,10 +1,10 @@
 import ApolloClient from "apollo-client";
 import { setupRecording, setupAPI } from "../../../testUtils/api";
-import { CollectionsAPI } from "./collections";
 import {
   OrderDirection,
   CollectionSortField,
 } from "../../gqlTypes/globalTypes";
+import { CollectionsAPI } from "./collections";
 import * as fixtures from "./fixtures";
 
 setupRecording();

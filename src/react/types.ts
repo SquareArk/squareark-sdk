@@ -29,10 +29,9 @@ export type ReturnData<T extends keyof APIProxy> = APIProxy[T] extends (
     : never
   : never;
 
-export type WatchQueryReturnData<
-  T extends keyof APIProxy
-> = APIProxy[T] extends (_: any, options: infer O) => any
-  ? O extends { onUpdate: (data: infer V) => any }
-    ? V
-    : never
-  : never;
+export type WatchQueryReturnData<T extends keyof APIProxy> =
+  APIProxy[T] extends (_: any, options: infer O) => any
+    ? O extends { onUpdate: (data: infer V) => any }
+      ? V
+      : never
+    : never;

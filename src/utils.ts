@@ -59,5 +59,5 @@ export function findValueInEnum<TEnum extends object>(
     throw new Error(`Value ${needle} not found in enum`);
   }
 
-  return (needle as unknown) as TEnum[keyof TEnum];
+  return needle as unknown as TEnum[keyof TEnum];
 }

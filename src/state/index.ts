@@ -13,9 +13,9 @@ import {
 } from "../helpers/LocalStorageHandler";
 import { JobsManager } from "../jobs";
 import { Config } from "../types";
-import { ISaleorStateSummeryPrices, StateItems } from "./types";
 import { AuthJobsEvents } from "../jobs/Auth";
 import { BROWSER_NO_CREDENTIAL_API_MESSAGE } from "../api/Auth";
+import { ISaleorStateSummeryPrices, StateItems } from "./types";
 
 export interface SaleorStateLoaded {
   user: boolean;
@@ -288,8 +288,8 @@ export class SaleorState extends NamedObservable<StateItems> {
             ...subtotalPrice.gross,
             amount: round(
               parseFloat(itemsGrossPrice) +
-              parseFloat(shippingPrice.amount) -
-              parseFloat(discount.amount),
+                parseFloat(shippingPrice.amount) -
+                parseFloat(discount.amount),
               2
             ),
           },
@@ -297,8 +297,8 @@ export class SaleorState extends NamedObservable<StateItems> {
             ...subtotalPrice.net,
             amount: round(
               parseFloat(itemsNetPrice) +
-              parseFloat(shippingPrice.amount) -
-              parseFloat(discount.amount),
+                parseFloat(shippingPrice.amount) -
+                parseFloat(discount.amount),
               2
             ),
           },

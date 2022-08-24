@@ -12,7 +12,7 @@ export interface ProductPricingField_pricing_priceRangeUndiscounted_start_gross 
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -24,7 +24,7 @@ export interface ProductPricingField_pricing_priceRangeUndiscounted_start_net {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -48,7 +48,7 @@ export interface ProductPricingField_pricing_priceRangeUndiscounted_stop_gross {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -60,7 +60,7 @@ export interface ProductPricingField_pricing_priceRangeUndiscounted_stop_net {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -96,7 +96,7 @@ export interface ProductPricingField_pricing_priceRange_start_gross {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -108,7 +108,7 @@ export interface ProductPricingField_pricing_priceRange_start_net {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -132,7 +132,7 @@ export interface ProductPricingField_pricing_priceRange_stop_gross {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -144,7 +144,7 @@ export interface ProductPricingField_pricing_priceRange_stop_net {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */

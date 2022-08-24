@@ -14,7 +14,7 @@ export interface CreateCheckoutPayment_checkoutPaymentCreate_checkout_totalPrice
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -26,7 +26,7 @@ export interface CreateCheckoutPayment_checkoutPaymentCreate_checkout_totalPrice
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -50,7 +50,7 @@ export interface CreateCheckoutPayment_checkoutPaymentCreate_checkout_subtotalPr
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -62,7 +62,7 @@ export interface CreateCheckoutPayment_checkoutPaymentCreate_checkout_subtotalPr
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -172,7 +172,7 @@ export interface CreateCheckoutPayment_checkoutPaymentCreate_checkout_availableS
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
 }
 
 export interface CreateCheckoutPayment_checkoutPaymentCreate_checkout_availableShippingMethods {
@@ -194,7 +194,7 @@ export interface CreateCheckoutPayment_checkoutPaymentCreate_checkout_shippingMe
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
 }
 
 export interface CreateCheckoutPayment_checkoutPaymentCreate_checkout_shippingMethod {
@@ -212,7 +212,7 @@ export interface CreateCheckoutPayment_checkoutPaymentCreate_checkout_shippingPr
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -224,7 +224,7 @@ export interface CreateCheckoutPayment_checkoutPaymentCreate_checkout_shippingPr
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -248,7 +248,7 @@ export interface CreateCheckoutPayment_checkoutPaymentCreate_checkout_lines_tota
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -260,7 +260,7 @@ export interface CreateCheckoutPayment_checkoutPaymentCreate_checkout_lines_tota
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -284,7 +284,7 @@ export interface CreateCheckoutPayment_checkoutPaymentCreate_checkout_lines_vari
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -296,7 +296,7 @@ export interface CreateCheckoutPayment_checkoutPaymentCreate_checkout_lines_vari
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -320,7 +320,7 @@ export interface CreateCheckoutPayment_checkoutPaymentCreate_checkout_lines_vari
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -332,7 +332,7 @@ export interface CreateCheckoutPayment_checkoutPaymentCreate_checkout_lines_vari
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -508,7 +508,7 @@ export interface CreateCheckoutPayment_checkoutPaymentCreate_checkout_discount {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
 }
 
 export interface CreateCheckoutPayment_checkoutPaymentCreate_checkout_availablePaymentGateways_config {
@@ -553,6 +553,7 @@ export interface CreateCheckoutPayment_checkoutPaymentCreate_checkout {
    * The ID of the object.
    */
   id: string;
+  note: string;
   /**
    * The sum of the the checkout line prices, with all the taxes,shipping costs, and discounts included.
    */
@@ -623,7 +624,7 @@ export interface CreateCheckoutPayment_checkoutPaymentCreate_payment_total {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */

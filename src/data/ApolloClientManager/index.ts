@@ -161,10 +161,7 @@ export class ApolloClientManager {
     };
   };
 
-  resetPasswordRequest = async (
-    email: string,
-    redirectUrl: string
-  ) => {
+  resetPasswordRequest = async (email: string, redirectUrl: string) => {
     const { data, errors } = await this.client.mutate<
       ResetPasswordRequest,
       ResetPasswordRequestVariables
@@ -592,12 +589,14 @@ export class ApolloClientManager {
   setShippingAddress = async (
     shippingAddress: ICheckoutAddress,
     email: string,
-    checkoutId: string
+    checkoutId: string,
+    note: string
   ) => {
     try {
       const variables = {
         checkoutId,
         email,
+        note,
         shippingAddress: {
           city: shippingAddress.city,
           companyName: shippingAddress.companyName,
@@ -654,7 +653,8 @@ export class ApolloClientManager {
 
   setBillingAddress = async (
     billingAddress: ICheckoutAddress,
-    checkoutId: string
+    checkoutId: string,
+    note?: string
   ) => {
     try {
       const variables = {
@@ -674,6 +674,7 @@ export class ApolloClientManager {
           streetAddress2: billingAddress.streetAddress2,
         },
         checkoutId,
+        note: note || "",
       };
       const { data, errors } = await this.client.mutate<
         UpdateCheckoutBillingAddress,

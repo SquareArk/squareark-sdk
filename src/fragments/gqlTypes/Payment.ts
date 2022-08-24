@@ -36,7 +36,7 @@ export interface Payment_total {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */

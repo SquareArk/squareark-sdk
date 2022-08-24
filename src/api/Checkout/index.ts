@@ -63,6 +63,7 @@ export class SaleorCheckoutAPI extends ErrorListener {
           id,
           token,
           email,
+          note,
           shippingAddress,
           billingAddress,
           selectedShippingAddressId,
@@ -80,6 +81,7 @@ export class SaleorCheckoutAPI extends ErrorListener {
           shippingAddress,
           shippingMethod,
           token,
+          note,
         };
         this.selectedShippingAddressId = selectedShippingAddressId;
         this.selectedBillingAddressId = selectedBillingAddressId;
@@ -115,7 +117,8 @@ export class SaleorCheckoutAPI extends ErrorListener {
 
   setShippingAddress = async (
     shippingAddress: IAddress,
-    email: string
+    email: string,
+    note: string
   ): CheckoutResponse => {
     const checkoutId = this.saleorState.checkout?.id;
     const alteredLines = this.saleorState.checkout?.lines?.map(item => ({
@@ -132,6 +135,7 @@ export class SaleorCheckoutAPI extends ErrorListener {
           email,
           selectedShippingAddressId: shippingAddress.id,
           shippingAddress,
+          note,
         }
       );
 
@@ -172,7 +176,8 @@ export class SaleorCheckoutAPI extends ErrorListener {
 
   setBillingAddress = async (
     billingAddress: IAddress,
-    email?: string
+    email?: string,
+    note?: any
   ): CheckoutResponse => {
     const checkoutId = this.saleorState.checkout?.id;
     const isShippingRequiredForProducts = this.saleorState.checkout?.lines
@@ -196,6 +201,7 @@ export class SaleorCheckoutAPI extends ErrorListener {
           billingAsShipping: false,
           checkoutId,
           selectedBillingAddressId: billingAddress.id,
+          note: note || "",
         }
       );
 
@@ -274,10 +280,9 @@ export class SaleorCheckoutAPI extends ErrorListener {
     };
   };
 
-  setBillingAsShippingAddress = async (): PromiseRunResponse<
-    DataErrorCheckoutTypes,
-    FunctionErrorCheckoutTypes
-  > => {
+  setBillingAsShippingAddress = async (
+    note?: any
+  ): PromiseRunResponse<DataErrorCheckoutTypes, FunctionErrorCheckoutTypes> => {
     const checkoutId = this.saleorState.checkout?.id;
 
     if (checkoutId && this.checkout?.shippingAddress) {
@@ -289,6 +294,7 @@ export class SaleorCheckoutAPI extends ErrorListener {
           billingAsShipping: true,
           checkoutId,
           selectedBillingAddressId: this.checkout?.shippingAddress.id,
+          note: note || "",
         }
       );
 

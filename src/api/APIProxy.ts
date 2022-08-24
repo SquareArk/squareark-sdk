@@ -27,8 +27,8 @@ import {
   isDataEmpty,
   mergeEdges,
 } from "../utils";
-import { SetPasswordChange, SetPasswordResult } from "./types";
 import { WINDOW_EXISTS } from "../consts";
+import { SetPasswordChange, SetPasswordResult } from "./types";
 
 const handleDataErrors = <T extends QueryShape, TData>(
   mapFn: MapFn<T, TData> | WatchMapFn<T, TData>,

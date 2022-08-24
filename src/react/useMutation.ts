@@ -72,9 +72,8 @@ const useMutation = <
 ): [MutationFn<TData, TVariables>, MutationResult<TData>] => {
   const saleor = useSaleorClient();
   const { generateNewMutationId, isMostRecentMutation } = useMutationTracking();
-  const [result, setResult] = React.useState<MutationResult<TData>>(
-    initialState
-  );
+  const [result, setResult] =
+    React.useState<MutationResult<TData>>(initialState);
 
   const handleMutationStart = () => {
     if (!result.loading) {
@@ -126,10 +125,12 @@ const useMutation = <
           ...(options as object),
         };
 
-        (saleor.legacyAPIProxy[mutation] as (
-          variables: any,
-          options: any
-        ) => Promise<any>)(apolloVariables, apolloOptions)
+        (
+          saleor.legacyAPIProxy[mutation] as (
+            variables: any,
+            options: any
+          ) => Promise<any>
+        )(apolloVariables, apolloOptions)
           .then(data => {
             handleMutationComplete(data.data, mutationId);
             resolve(data);
@@ -146,11 +147,13 @@ const useMutation = <
   return [runMutation, result];
 };
 
-export const mutationFactory = <
-  T extends keyof APIProxy,
-  TVariables extends Variables<T>,
-  TOptions extends Options<T>
->(
-  mutation: T
-) => (variables?: TVariables, options?: TOptions) =>
-  useMutation(mutation, variables, options);
+export const mutationFactory =
+  <
+    T extends keyof APIProxy,
+    TVariables extends Variables<T>,
+    TOptions extends Options<T>
+  >(
+    mutation: T
+  ) =>
+  (variables?: TVariables, options?: TOptions) =>
+    useMutation(mutation, variables, options);

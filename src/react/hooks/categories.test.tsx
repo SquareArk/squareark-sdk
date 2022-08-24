@@ -2,13 +2,13 @@ import { act, renderHook } from "@testing-library/react-hooks";
 import React from "react";
 import { ApolloProvider } from "react-apollo";
 import { setupRecording, setupAPI } from "../../../testUtils/api";
+import * as fixtures from "../../api/categories/fixtures";
 import {
   useCategoryList,
   useCategoryChildrenList,
   useCategoryAncestorsList,
   useCategoryDetails,
 } from "./categories";
-import * as fixtures from "../../api/categories/fixtures";
 
 setupRecording();
 

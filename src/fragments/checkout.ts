@@ -118,6 +118,7 @@ export const checkoutFragment = gql`
   fragment Checkout on Checkout {
     token
     id
+    note
     totalPrice {
       ...Price
     }

@@ -24,7 +24,7 @@ export interface OrdersByUser_me_orders_edges_node_total_gross {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -36,7 +36,7 @@ export interface OrdersByUser_me_orders_edges_node_total_net {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */

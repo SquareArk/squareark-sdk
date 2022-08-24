@@ -16,7 +16,7 @@ export interface ShippingMethod_price {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
 }
 
 export interface ShippingMethod {
