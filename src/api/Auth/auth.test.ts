@@ -1,12 +1,12 @@
 import { InMemoryCache } from "apollo-cache-inmemory";
 import { setupRecording, setupAPI } from "../../../testUtils/api";
-import { AuthAPI } from ".";
 import { defaultConfig } from "../../config";
 import { LocalStorageHandler } from "../../helpers";
 import { ApolloClientManager } from "../../data/ApolloClientManager";
 import { JobsManager } from "../../jobs";
 import { SaleorState } from "../../state";
 import APIProxy from "../APIProxy";
+import { AuthAPI } from ".";
 
 setupRecording();
 

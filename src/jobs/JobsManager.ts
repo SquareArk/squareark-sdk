@@ -204,7 +204,8 @@ export class JobsManager {
 
         if (jobGroup) {
           Object.keys(jobGroup).forEach(jobNameString => {
-            const jobNameKey = jobNameString as keyof QueuedJobs[keyof IQueuedJobs];
+            const jobNameKey =
+              jobNameString as keyof QueuedJobs[keyof IQueuedJobs];
             const jobNameState = jobGroup[jobNameKey];
 
             if (jobNameState) {

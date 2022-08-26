@@ -55,7 +55,7 @@ export interface UserOrderByToken_orderByToken_lines_variant_pricing_priceUndisc
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -67,7 +67,7 @@ export interface UserOrderByToken_orderByToken_lines_variant_pricing_priceUndisc
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -91,7 +91,7 @@ export interface UserOrderByToken_orderByToken_lines_variant_pricing_price_gross
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -103,7 +103,7 @@ export interface UserOrderByToken_orderByToken_lines_variant_pricing_price_net {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -261,7 +261,7 @@ export interface UserOrderByToken_orderByToken_lines_unitPrice_gross {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -273,7 +273,7 @@ export interface UserOrderByToken_orderByToken_lines_unitPrice_net {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -301,7 +301,7 @@ export interface UserOrderByToken_orderByToken_lines_totalPrice_gross {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -313,7 +313,7 @@ export interface UserOrderByToken_orderByToken_lines_totalPrice_net {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -359,7 +359,7 @@ export interface UserOrderByToken_orderByToken_subtotal_gross {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -371,7 +371,7 @@ export interface UserOrderByToken_orderByToken_subtotal_net {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -395,7 +395,7 @@ export interface UserOrderByToken_orderByToken_total_gross {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -407,7 +407,7 @@ export interface UserOrderByToken_orderByToken_total_net {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -431,7 +431,7 @@ export interface UserOrderByToken_orderByToken_shippingPrice_gross {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -443,7 +443,7 @@ export interface UserOrderByToken_orderByToken_shippingPrice_net {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */

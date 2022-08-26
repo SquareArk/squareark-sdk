@@ -14,7 +14,7 @@ export interface RemoveCheckoutPromoCode_checkoutRemovePromoCode_checkout_totalP
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -26,7 +26,7 @@ export interface RemoveCheckoutPromoCode_checkoutRemovePromoCode_checkout_totalP
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -50,7 +50,7 @@ export interface RemoveCheckoutPromoCode_checkoutRemovePromoCode_checkout_subtot
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -62,7 +62,7 @@ export interface RemoveCheckoutPromoCode_checkoutRemovePromoCode_checkout_subtot
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -172,7 +172,7 @@ export interface RemoveCheckoutPromoCode_checkoutRemovePromoCode_checkout_availa
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
 }
 
 export interface RemoveCheckoutPromoCode_checkoutRemovePromoCode_checkout_availableShippingMethods {
@@ -194,7 +194,7 @@ export interface RemoveCheckoutPromoCode_checkoutRemovePromoCode_checkout_shippi
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
 }
 
 export interface RemoveCheckoutPromoCode_checkoutRemovePromoCode_checkout_shippingMethod {
@@ -212,7 +212,7 @@ export interface RemoveCheckoutPromoCode_checkoutRemovePromoCode_checkout_shippi
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -224,7 +224,7 @@ export interface RemoveCheckoutPromoCode_checkoutRemovePromoCode_checkout_shippi
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -248,7 +248,7 @@ export interface RemoveCheckoutPromoCode_checkoutRemovePromoCode_checkout_lines_
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -260,7 +260,7 @@ export interface RemoveCheckoutPromoCode_checkoutRemovePromoCode_checkout_lines_
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -284,7 +284,7 @@ export interface RemoveCheckoutPromoCode_checkoutRemovePromoCode_checkout_lines_
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -296,7 +296,7 @@ export interface RemoveCheckoutPromoCode_checkoutRemovePromoCode_checkout_lines_
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -320,7 +320,7 @@ export interface RemoveCheckoutPromoCode_checkoutRemovePromoCode_checkout_lines_
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -332,7 +332,7 @@ export interface RemoveCheckoutPromoCode_checkoutRemovePromoCode_checkout_lines_
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -508,7 +508,7 @@ export interface RemoveCheckoutPromoCode_checkoutRemovePromoCode_checkout_discou
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
 }
 
 export interface RemoveCheckoutPromoCode_checkoutRemovePromoCode_checkout_availablePaymentGateways_config {
@@ -553,6 +553,7 @@ export interface RemoveCheckoutPromoCode_checkoutRemovePromoCode_checkout {
    * The ID of the object.
    */
   id: string;
+  note: string;
   /**
    * The sum of the the checkout line prices, with all the taxes,shipping costs, and discounts included.
    */

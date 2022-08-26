@@ -14,7 +14,7 @@ export interface UpdateCheckoutLine_checkoutLinesUpdate_checkout_totalPrice_gros
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -26,7 +26,7 @@ export interface UpdateCheckoutLine_checkoutLinesUpdate_checkout_totalPrice_net 
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -50,7 +50,7 @@ export interface UpdateCheckoutLine_checkoutLinesUpdate_checkout_subtotalPrice_g
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -62,7 +62,7 @@ export interface UpdateCheckoutLine_checkoutLinesUpdate_checkout_subtotalPrice_n
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -172,7 +172,7 @@ export interface UpdateCheckoutLine_checkoutLinesUpdate_checkout_availableShippi
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
 }
 
 export interface UpdateCheckoutLine_checkoutLinesUpdate_checkout_availableShippingMethods {
@@ -194,7 +194,7 @@ export interface UpdateCheckoutLine_checkoutLinesUpdate_checkout_shippingMethod_
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
 }
 
 export interface UpdateCheckoutLine_checkoutLinesUpdate_checkout_shippingMethod {
@@ -212,7 +212,7 @@ export interface UpdateCheckoutLine_checkoutLinesUpdate_checkout_shippingPrice_g
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -224,7 +224,7 @@ export interface UpdateCheckoutLine_checkoutLinesUpdate_checkout_shippingPrice_n
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -248,7 +248,7 @@ export interface UpdateCheckoutLine_checkoutLinesUpdate_checkout_lines_totalPric
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -260,7 +260,7 @@ export interface UpdateCheckoutLine_checkoutLinesUpdate_checkout_lines_totalPric
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -284,7 +284,7 @@ export interface UpdateCheckoutLine_checkoutLinesUpdate_checkout_lines_variant_p
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -296,7 +296,7 @@ export interface UpdateCheckoutLine_checkoutLinesUpdate_checkout_lines_variant_p
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -320,7 +320,7 @@ export interface UpdateCheckoutLine_checkoutLinesUpdate_checkout_lines_variant_p
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -332,7 +332,7 @@ export interface UpdateCheckoutLine_checkoutLinesUpdate_checkout_lines_variant_p
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -508,7 +508,7 @@ export interface UpdateCheckoutLine_checkoutLinesUpdate_checkout_discount {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
 }
 
 export interface UpdateCheckoutLine_checkoutLinesUpdate_checkout_availablePaymentGateways_config {
@@ -553,6 +553,7 @@ export interface UpdateCheckoutLine_checkoutLinesUpdate_checkout {
    * The ID of the object.
    */
   id: string;
+  note: string;
   /**
    * The sum of the the checkout line prices, with all the taxes,shipping costs, and discounts included.
    */

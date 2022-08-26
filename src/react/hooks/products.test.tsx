@@ -2,9 +2,9 @@ import { act, renderHook } from "@testing-library/react-hooks";
 import React from "react";
 import { ApolloProvider } from "react-apollo";
 import { setupAPI, setupRecording } from "../../../testUtils/api";
-import { useProductDetails, useProductList } from "./products";
 import { OrderDirection, ProductOrderField } from "../../gqlTypes/globalTypes";
 import * as fixtures from "../../api/products/fixtures";
+import { useProductDetails, useProductList } from "./products";
 
 setupRecording();
 

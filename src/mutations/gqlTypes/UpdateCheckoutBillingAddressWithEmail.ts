@@ -31,7 +31,7 @@ export interface UpdateCheckoutBillingAddressWithEmail_checkoutBillingAddressUpd
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -43,7 +43,7 @@ export interface UpdateCheckoutBillingAddressWithEmail_checkoutBillingAddressUpd
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -67,7 +67,7 @@ export interface UpdateCheckoutBillingAddressWithEmail_checkoutBillingAddressUpd
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -79,7 +79,7 @@ export interface UpdateCheckoutBillingAddressWithEmail_checkoutBillingAddressUpd
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -189,7 +189,7 @@ export interface UpdateCheckoutBillingAddressWithEmail_checkoutBillingAddressUpd
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
 }
 
 export interface UpdateCheckoutBillingAddressWithEmail_checkoutBillingAddressUpdate_checkout_availableShippingMethods {
@@ -211,7 +211,7 @@ export interface UpdateCheckoutBillingAddressWithEmail_checkoutBillingAddressUpd
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
 }
 
 export interface UpdateCheckoutBillingAddressWithEmail_checkoutBillingAddressUpdate_checkout_shippingMethod {
@@ -229,7 +229,7 @@ export interface UpdateCheckoutBillingAddressWithEmail_checkoutBillingAddressUpd
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -241,7 +241,7 @@ export interface UpdateCheckoutBillingAddressWithEmail_checkoutBillingAddressUpd
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -265,7 +265,7 @@ export interface UpdateCheckoutBillingAddressWithEmail_checkoutBillingAddressUpd
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -277,7 +277,7 @@ export interface UpdateCheckoutBillingAddressWithEmail_checkoutBillingAddressUpd
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -301,7 +301,7 @@ export interface UpdateCheckoutBillingAddressWithEmail_checkoutBillingAddressUpd
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -313,7 +313,7 @@ export interface UpdateCheckoutBillingAddressWithEmail_checkoutBillingAddressUpd
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -337,7 +337,7 @@ export interface UpdateCheckoutBillingAddressWithEmail_checkoutBillingAddressUpd
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -349,7 +349,7 @@ export interface UpdateCheckoutBillingAddressWithEmail_checkoutBillingAddressUpd
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -525,7 +525,7 @@ export interface UpdateCheckoutBillingAddressWithEmail_checkoutBillingAddressUpd
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
 }
 
 export interface UpdateCheckoutBillingAddressWithEmail_checkoutBillingAddressUpdate_checkout_availablePaymentGateways_config {
@@ -570,6 +570,7 @@ export interface UpdateCheckoutBillingAddressWithEmail_checkoutBillingAddressUpd
    * The ID of the object.
    */
   id: string;
+  note: string;
   /**
    * The sum of the the checkout line prices, with all the taxes,shipping costs, and discounts included.
    */
@@ -625,7 +626,7 @@ export interface UpdateCheckoutBillingAddressWithEmail_checkoutEmailUpdate_check
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -637,7 +638,7 @@ export interface UpdateCheckoutBillingAddressWithEmail_checkoutEmailUpdate_check
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -661,7 +662,7 @@ export interface UpdateCheckoutBillingAddressWithEmail_checkoutEmailUpdate_check
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -673,7 +674,7 @@ export interface UpdateCheckoutBillingAddressWithEmail_checkoutEmailUpdate_check
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -783,7 +784,7 @@ export interface UpdateCheckoutBillingAddressWithEmail_checkoutEmailUpdate_check
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
 }
 
 export interface UpdateCheckoutBillingAddressWithEmail_checkoutEmailUpdate_checkout_availableShippingMethods {
@@ -805,7 +806,7 @@ export interface UpdateCheckoutBillingAddressWithEmail_checkoutEmailUpdate_check
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
 }
 
 export interface UpdateCheckoutBillingAddressWithEmail_checkoutEmailUpdate_checkout_shippingMethod {
@@ -823,7 +824,7 @@ export interface UpdateCheckoutBillingAddressWithEmail_checkoutEmailUpdate_check
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -835,7 +836,7 @@ export interface UpdateCheckoutBillingAddressWithEmail_checkoutEmailUpdate_check
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -859,7 +860,7 @@ export interface UpdateCheckoutBillingAddressWithEmail_checkoutEmailUpdate_check
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -871,7 +872,7 @@ export interface UpdateCheckoutBillingAddressWithEmail_checkoutEmailUpdate_check
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -895,7 +896,7 @@ export interface UpdateCheckoutBillingAddressWithEmail_checkoutEmailUpdate_check
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -907,7 +908,7 @@ export interface UpdateCheckoutBillingAddressWithEmail_checkoutEmailUpdate_check
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -931,7 +932,7 @@ export interface UpdateCheckoutBillingAddressWithEmail_checkoutEmailUpdate_check
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -943,7 +944,7 @@ export interface UpdateCheckoutBillingAddressWithEmail_checkoutEmailUpdate_check
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -1119,7 +1120,7 @@ export interface UpdateCheckoutBillingAddressWithEmail_checkoutEmailUpdate_check
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
 }
 
 export interface UpdateCheckoutBillingAddressWithEmail_checkoutEmailUpdate_checkout_availablePaymentGateways_config {
@@ -1164,6 +1165,7 @@ export interface UpdateCheckoutBillingAddressWithEmail_checkoutEmailUpdate_check
    * The ID of the object.
    */
   id: string;
+  note: string;
   /**
    * The sum of the the checkout line prices, with all the taxes,shipping costs, and discounts included.
    */

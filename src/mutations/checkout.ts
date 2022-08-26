@@ -76,10 +76,12 @@ export const updateCheckoutBillingAddressMutation = gql`
   mutation UpdateCheckoutBillingAddress(
     $checkoutId: ID!
     $billingAddress: AddressInput!
+    $note: String!
   ) {
     checkoutBillingAddressUpdate(
       checkoutId: $checkoutId
       billingAddress: $billingAddress
+      note: $note
     ) {
       errors: checkoutErrors {
         ...CheckoutError
@@ -98,10 +100,12 @@ export const updateCheckoutShippingAddressMutation = gql`
     $checkoutId: ID!
     $shippingAddress: AddressInput!
     $email: String!
+    $note: String!
   ) {
     checkoutShippingAddressUpdate(
       checkoutId: $checkoutId
       shippingAddress: $shippingAddress
+      note: $note
     ) {
       errors: checkoutErrors {
         ...CheckoutError

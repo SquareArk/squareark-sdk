@@ -12,7 +12,7 @@ export interface UserCheckoutDetails_me_checkout_totalPrice_gross {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -24,7 +24,7 @@ export interface UserCheckoutDetails_me_checkout_totalPrice_net {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -48,7 +48,7 @@ export interface UserCheckoutDetails_me_checkout_subtotalPrice_gross {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -60,7 +60,7 @@ export interface UserCheckoutDetails_me_checkout_subtotalPrice_net {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -170,7 +170,7 @@ export interface UserCheckoutDetails_me_checkout_availableShippingMethods_price 
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
 }
 
 export interface UserCheckoutDetails_me_checkout_availableShippingMethods {
@@ -192,7 +192,7 @@ export interface UserCheckoutDetails_me_checkout_shippingMethod_price {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
 }
 
 export interface UserCheckoutDetails_me_checkout_shippingMethod {
@@ -210,7 +210,7 @@ export interface UserCheckoutDetails_me_checkout_shippingPrice_gross {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -222,7 +222,7 @@ export interface UserCheckoutDetails_me_checkout_shippingPrice_net {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -246,7 +246,7 @@ export interface UserCheckoutDetails_me_checkout_lines_totalPrice_gross {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -258,7 +258,7 @@ export interface UserCheckoutDetails_me_checkout_lines_totalPrice_net {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -282,7 +282,7 @@ export interface UserCheckoutDetails_me_checkout_lines_variant_pricing_priceUndi
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -294,7 +294,7 @@ export interface UserCheckoutDetails_me_checkout_lines_variant_pricing_priceUndi
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -318,7 +318,7 @@ export interface UserCheckoutDetails_me_checkout_lines_variant_pricing_price_gro
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -330,7 +330,7 @@ export interface UserCheckoutDetails_me_checkout_lines_variant_pricing_price_net
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -506,7 +506,7 @@ export interface UserCheckoutDetails_me_checkout_discount {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
 }
 
 export interface UserCheckoutDetails_me_checkout_availablePaymentGateways_config {
@@ -551,6 +551,7 @@ export interface UserCheckoutDetails_me_checkout {
    * The ID of the object.
    */
   id: string;
+  note: string;
   /**
    * The sum of the the checkout line prices, with all the taxes,shipping costs, and discounts included.
    */

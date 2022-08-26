@@ -41,7 +41,7 @@ export interface ProductDetails_pricing_priceRangeUndiscounted_start_gross {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -53,7 +53,7 @@ export interface ProductDetails_pricing_priceRangeUndiscounted_start_net {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -77,7 +77,7 @@ export interface ProductDetails_pricing_priceRangeUndiscounted_stop_gross {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -89,7 +89,7 @@ export interface ProductDetails_pricing_priceRangeUndiscounted_stop_net {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -125,7 +125,7 @@ export interface ProductDetails_pricing_priceRange_start_gross {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -137,7 +137,7 @@ export interface ProductDetails_pricing_priceRange_start_net {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -161,7 +161,7 @@ export interface ProductDetails_pricing_priceRange_stop_gross {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -173,7 +173,7 @@ export interface ProductDetails_pricing_priceRange_stop_net {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -254,7 +254,7 @@ export interface ProductDetails_category_products_edges_node_pricing_priceRangeU
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -266,7 +266,7 @@ export interface ProductDetails_category_products_edges_node_pricing_priceRangeU
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -290,7 +290,7 @@ export interface ProductDetails_category_products_edges_node_pricing_priceRangeU
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -302,7 +302,7 @@ export interface ProductDetails_category_products_edges_node_pricing_priceRangeU
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -338,7 +338,7 @@ export interface ProductDetails_category_products_edges_node_pricing_priceRange_
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -350,7 +350,7 @@ export interface ProductDetails_category_products_edges_node_pricing_priceRange_
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -374,7 +374,7 @@ export interface ProductDetails_category_products_edges_node_pricing_priceRange_
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -386,7 +386,7 @@ export interface ProductDetails_category_products_edges_node_pricing_priceRange_
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -571,7 +571,7 @@ export interface ProductDetails_variants_pricing_priceUndiscounted_gross {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -583,7 +583,7 @@ export interface ProductDetails_variants_pricing_priceUndiscounted_net {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -607,7 +607,7 @@ export interface ProductDetails_variants_pricing_price_gross {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -619,7 +619,7 @@ export interface ProductDetails_variants_pricing_price_net {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */

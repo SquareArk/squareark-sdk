@@ -5,6 +5,7 @@ import {
 import { ApolloClientManager } from "../../data/ApolloClientManager";
 import { LocalStorageHandler } from "../../helpers/LocalStorageHandler";
 import { JobRunResponse } from "../types";
+import { JobsHandler } from "../JobsHandler";
 import {
   CompleteCheckoutJobInput,
   CreatePaymentJobInput,
@@ -17,7 +18,6 @@ import {
   SetBillingAddressJobInput,
   SetBillingAddressWithEmailJobInput,
 } from "./types";
-import { JobsHandler } from "../JobsHandler";
 
 export type PromiseCheckoutJobRunResponse = Promise<
   JobRunResponse<DataErrorCheckoutTypes, FunctionErrorCheckoutTypes>
@@ -105,13 +105,15 @@ class CheckoutJobs extends JobsHandler<{}> {
     shippingAddress,
     email,
     selectedShippingAddressId,
+    note,
   }: SetShippingAddressJobInput): PromiseCheckoutJobRunResponse => {
     const checkout = LocalStorageHandler.getCheckout();
 
     const { data, error } = await this.apolloClientManager.setShippingAddress(
       shippingAddress,
       email,
-      checkoutId
+      checkoutId,
+      note
     );
 
     if (error) {
@@ -139,12 +141,14 @@ class CheckoutJobs extends JobsHandler<{}> {
     billingAddress,
     billingAsShipping,
     selectedBillingAddressId,
+    note,
   }: SetBillingAddressJobInput): PromiseCheckoutJobRunResponse => {
     const checkout = LocalStorageHandler.getCheckout();
 
     const { data, error } = await this.apolloClientManager.setBillingAddress(
       billingAddress,
-      checkoutId
+      checkoutId,
+      note
     );
 
     if (error) {
@@ -174,14 +178,12 @@ class CheckoutJobs extends JobsHandler<{}> {
   }: SetBillingAddressWithEmailJobInput): PromiseCheckoutJobRunResponse => {
     const checkout = LocalStorageHandler.getCheckout();
 
-    const {
-      data,
-      error,
-    } = await this.apolloClientManager.setBillingAddressWithEmail(
-      billingAddress,
-      email,
-      checkoutId
-    );
+    const { data, error } =
+      await this.apolloClientManager.setBillingAddressWithEmail(
+        billingAddress,
+        email,
+        checkoutId
+      );
 
     if (error) {
       return {

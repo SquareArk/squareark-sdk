@@ -62,6 +62,7 @@ export enum CheckoutErrorCode {
   INVALID = "INVALID",
   INVALID_SHIPPING_METHOD = "INVALID_SHIPPING_METHOD",
   NOT_FOUND = "NOT_FOUND",
+  OUT_OF_STOCK = "OUT_OF_STOCK",
   PAYMENT_ERROR = "PAYMENT_ERROR",
   PRODUCT_NOT_PUBLISHED = "PRODUCT_NOT_PUBLISHED",
   PRODUCT_UNAVAILABLE_FOR_PURCHASE = "PRODUCT_UNAVAILABLE_FOR_PURCHASE",
@@ -456,6 +457,7 @@ export interface AttributeInput {
 export interface CheckoutCreateInput {
   lines: (CheckoutLineInput | null)[];
   email?: string | null;
+  note?: string | null;
   shippingAddress?: AddressInput | null;
   billingAddress?: AddressInput | null;
 }

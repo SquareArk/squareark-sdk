@@ -131,11 +131,12 @@ const useQuery = <
   };
 };
 
-export const queryWithVariablesFactory = <T extends keyof APIProxy>(
-  query: T
-) => (variables: Variables<T>, options?: OmittedOptions<T>) =>
-  useQuery(query, variables, options);
+export const queryWithVariablesFactory =
+  <T extends keyof APIProxy>(query: T) =>
+  (variables: Variables<T>, options?: OmittedOptions<T>) =>
+    useQuery(query, variables, options);
 
-export const queryFactory = <T extends keyof APIProxy>(query: T) => (
-  options?: OmittedOptions<T>
-) => useQuery(query, undefined, options);
+export const queryFactory =
+  <T extends keyof APIProxy>(query: T) =>
+  (options?: OmittedOptions<T>) =>
+    useQuery(query, undefined, options);

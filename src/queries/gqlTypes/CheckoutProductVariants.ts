@@ -12,7 +12,7 @@ export interface CheckoutProductVariants_productVariants_edges_node_pricing_pric
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -24,7 +24,7 @@ export interface CheckoutProductVariants_productVariants_edges_node_pricing_pric
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -48,7 +48,7 @@ export interface CheckoutProductVariants_productVariants_edges_node_pricing_pric
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -60,7 +60,7 @@ export interface CheckoutProductVariants_productVariants_edges_node_pricing_pric
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */

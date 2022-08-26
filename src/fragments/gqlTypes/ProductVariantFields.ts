@@ -25,7 +25,7 @@ export interface ProductVariantFields_pricing_priceUndiscounted_gross {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -37,7 +37,7 @@ export interface ProductVariantFields_pricing_priceUndiscounted_net {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -61,7 +61,7 @@ export interface ProductVariantFields_pricing_price_gross {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
@@ -73,7 +73,7 @@ export interface ProductVariantFields_pricing_price_net {
   /**
    * Amount of money.
    */
-  amount: number;
+  amount: any;
   /**
    * Currency code.
    */
