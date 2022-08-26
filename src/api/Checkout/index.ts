@@ -114,7 +114,6 @@ export class SaleorCheckoutAPI extends ErrorListener {
       }
     );
   }
-
   setShippingAddress = async (
     shippingAddress: IAddress,
     email: string,
@@ -154,6 +153,39 @@ export class SaleorCheckoutAPI extends ErrorListener {
           lines: alteredLines,
           selectedShippingAddressId: shippingAddress.id,
           shippingAddress,
+        }
+      );
+
+      return {
+        data,
+        dataError,
+        pending: false,
+      };
+    }
+    return {
+      functionError: {
+        error: new Error(
+          "You need to add items to cart before setting shipping address."
+        ),
+        type: FunctionErrorCheckoutTypes.ITEMS_NOT_ADDED_TO_CART,
+      },
+      pending: false,
+    };
+  };
+
+  createChckout = async (email: string): CheckoutResponse => {
+    const alteredLines = this.saleorState.checkout?.lines?.map(item => ({
+      quantity: item!.quantity,
+      variantId: item?.variant!.id,
+    }));
+
+    if (alteredLines) {
+      const { data, dataError } = await this.jobsManager.run(
+        "checkout",
+        "createCheckout",
+        {
+          email,
+          lines: alteredLines,
         }
       );
 
