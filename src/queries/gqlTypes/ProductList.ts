@@ -29,15 +29,6 @@ export interface ProductList_products_edges_node_thumbnail2x {
   url: string;
 }
 
-export interface ProductList_products_edges_node_translation {
-  __typename: "ProductTranslation";
-  /**
-   * The ID of the object.
-   */
-  id: string;
-  name: string;
-}
-
 export interface ProductList_products_edges_node_pricing_priceRangeUndiscounted_start_gross {
   __typename: "Money";
   /**
@@ -244,10 +235,6 @@ export interface ProductList_products_edges_node {
    * The main thumbnail for a product.
    */
   thumbnail2x: ProductList_products_edges_node_thumbnail2x | null;
-  /**
-   * Returns translated product fields for the given language code.
-   */
-  translation: ProductList_products_edges_node_translation | null;
   /**
    * Lists the storefront product's pricing, the current price and discounts, only meant for displaying.
    */

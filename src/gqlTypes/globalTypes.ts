@@ -415,6 +415,8 @@ export enum ProductOrderField {
   NAME = "NAME",
   PRICE = "PRICE",
   PRICE_CUSTOMER = "PRICE_CUSTOMER",
+  PRODUCT_CREATED_DATE = "PRODUCT_CREATED_DATE",
+  PRODUCT_UPDATED_DATE = "PRODUCT_UPDATED_DATE",
   PUBLICATION_DATE = "PUBLICATION_DATE",
   PUBLISHED = "PUBLISHED",
   RELEVANT = "RELEVANT",
@@ -460,6 +462,7 @@ export interface CheckoutCreateInput {
   note?: string | null;
   shippingAddress?: AddressInput | null;
   billingAddress?: AddressInput | null;
+  onlyCreate?: boolean | null;
 }
 
 export interface CheckoutLineInput {
@@ -477,6 +480,11 @@ export interface CollectionFilterInput {
 export interface CollectionSortingInput {
   direction: OrderDirection;
   field: CollectionSortField;
+}
+
+export interface DateRangeInput {
+  gte?: any | null;
+  lte?: any | null;
 }
 
 export interface IntRangeInput {
@@ -502,6 +510,8 @@ export interface ProductFilterInput {
   inDemand?: boolean | null;
   collections?: (string | null)[] | null;
   categories?: (string | null)[] | null;
+  createdAt?: DateRangeInput | null;
+  updatedAt?: DateRangeInput | null;
   hasCategory?: boolean | null;
   attributes?: (AttributeInput | null)[] | null;
   stockAvailability?: StockAvailability | null;

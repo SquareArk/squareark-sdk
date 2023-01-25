@@ -27,15 +27,6 @@ export interface BaseProduct_thumbnail2x {
   url: string;
 }
 
-export interface BaseProduct_translation {
-  __typename: "ProductTranslation";
-  /**
-   * The ID of the object.
-   */
-  id: string;
-  name: string;
-}
-
 export interface BaseProduct {
   __typename: "Product";
   /**
@@ -58,8 +49,4 @@ export interface BaseProduct {
    * The main thumbnail for a product.
    */
   thumbnail2x: BaseProduct_thumbnail2x | null;
-  /**
-   * Returns translated product fields for the given language code.
-   */
-  translation: BaseProduct_translation | null;
 }

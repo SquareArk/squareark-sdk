@@ -4,6 +4,7 @@ import { checkoutFragment } from "../fragments/checkout";
 import { paymentFragment } from "../fragments/payment";
 import { orderDetailFragment } from "../fragments/order";
 import {
+  checkoutErrorAsListFragment,
   checkoutErrorFragment,
   paymentErrorFragment,
 } from "../fragments/errors";
@@ -25,11 +26,11 @@ export const updateCheckoutLineMutation = gql`
 
 export const createCheckoutMutation = gql`
   ${checkoutFragment}
-  ${checkoutErrorFragment}
+  ${checkoutErrorAsListFragment}
   mutation CreateCheckout($checkoutInput: CheckoutCreateInput!) {
     checkoutCreate(input: $checkoutInput) {
-      errors: checkoutErrors {
-        ...CheckoutError
+      errors: checkoutErrorsAsList {
+        ...checkoutErrorAsList
       }
       checkout {
         ...Checkout
