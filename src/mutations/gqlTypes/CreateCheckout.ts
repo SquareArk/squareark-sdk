@@ -10,7 +10,7 @@ import { CheckoutCreateInput, CheckoutErrorCode } from "./../../gqlTypes/globalT
 // ====================================================
 
 export interface CreateCheckout_checkoutCreate_errors {
-  __typename: "CheckoutError";
+  __typename: "CheckoutErrorAsList";
   /**
    * The error code.
    */
@@ -24,6 +24,14 @@ export interface CreateCheckout_checkoutCreate_errors {
    * The error message.
    */
   message: string | null;
+  /**
+   * variant's available qty.
+   */
+  availableQuantity: string[] | null;
+  /**
+   * List of varint IDs which causes the error.
+   */
+  variants: string[] | null;
 }
 
 export interface CreateCheckout_checkoutCreate_checkout_totalPrice_gross {

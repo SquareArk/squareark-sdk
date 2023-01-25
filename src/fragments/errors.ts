@@ -8,6 +8,18 @@ export const checkoutErrorFragment = gql`
   }
 `;
 
+export const checkoutErrorAsListFragment = gql`
+  fragment checkoutErrorAsList on CheckoutErrorAsList {
+    code
+    field
+    message
+    availableQuantity
+    variants
+    __typename
+  }
+`;
+
+
 export const paymentErrorFragment = gql`
   fragment PaymentError on PaymentError {
     code

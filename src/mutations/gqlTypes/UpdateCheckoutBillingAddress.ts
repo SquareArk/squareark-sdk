@@ -631,5 +631,5 @@ export interface UpdateCheckoutBillingAddress {
 export interface UpdateCheckoutBillingAddressVariables {
   checkoutId: string;
   billingAddress: AddressInput;
-  note?: string | null;
+  note: string;
 }
