@@ -9,6 +9,18 @@ import { CheckoutErrorCode } from "./../../gqlTypes/globalTypes";
 // GraphQL fragment: checkoutErrorAsList
 // ====================================================
 
+export interface checkoutErrorAsList_availability {
+  __typename: "AvailableQuantityType";
+  /**
+   * remaining qty
+   */
+  quantity: number | null;
+  /**
+   * variant id.
+   */
+  variants: string | null;
+}
+
 export interface checkoutErrorAsList {
   __typename: "CheckoutErrorAsList";
   /**
@@ -28,6 +40,10 @@ export interface checkoutErrorAsList {
    * variant's available qty.
    */
   availableQuantity: string[] | null;
+  /**
+   * List of both varint IDs and it's availability.
+   */
+  availability: (checkoutErrorAsList_availability | null)[] | null;
   /**
    * List of varint IDs which causes the error.
    */
