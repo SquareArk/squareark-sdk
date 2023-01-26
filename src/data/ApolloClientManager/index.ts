@@ -520,9 +520,9 @@ export class ApolloClientManager {
           error: errors,
         };
       }
-      if (data?.checkoutCreate?.errors.length) {
+      if (data?.checkoutCreate?.checkoutErrorsAsList.length) {
         return {
-          error: data?.checkoutCreate?.errors,
+          error: data?.checkoutCreate?.checkoutErrorsAsList,
         };
       }
       if (data?.checkoutCreate?.checkout) {
@@ -565,9 +565,9 @@ export class ApolloClientManager {
             error: errors,
           };
         }
-        if (data?.checkoutLinesUpdate?.errors.length) {
+        if (data?.checkoutLinesUpdate?.checkoutErrorAsList.length) {
           return {
-            error: data?.checkoutLinesUpdate?.errors,
+            error: data?.checkoutLinesUpdate?.checkoutErrorAsList,
           };
         }
         if (data?.checkoutLinesUpdate?.checkout) {

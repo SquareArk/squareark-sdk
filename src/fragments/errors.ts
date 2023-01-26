@@ -14,6 +14,10 @@ export const checkoutErrorAsListFragment = gql`
     field
     message
     availableQuantity
+    availability {
+      quantity
+      variants
+    }
     variants
     __typename
   }

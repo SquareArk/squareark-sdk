@@ -9,7 +9,19 @@ import { CheckoutCreateInput, CheckoutErrorCode } from "./../../gqlTypes/globalT
 // GraphQL mutation operation: CreateCheckout
 // ====================================================
 
-export interface CreateCheckout_checkoutCreate_errors {
+export interface CreateCheckout_checkoutCreate_checkoutErrorsAsList_availability {
+  __typename: "AvailableQuantityType";
+  /**
+   * remaining qty
+   */
+  quantity: number | null;
+  /**
+   * variant id.
+   */
+  variants: string | null;
+}
+
+export interface CreateCheckout_checkoutCreate_checkoutErrorsAsList {
   __typename: "CheckoutErrorAsList";
   /**
    * The error code.
@@ -28,6 +40,10 @@ export interface CreateCheckout_checkoutCreate_errors {
    * variant's available qty.
    */
   availableQuantity: string[] | null;
+  /**
+   * List of both varint IDs and it's availability.
+   */
+  availability: (CreateCheckout_checkoutCreate_checkoutErrorsAsList_availability | null)[] | null;
   /**
    * List of varint IDs which causes the error.
    */
@@ -622,7 +638,7 @@ export interface CreateCheckout_checkoutCreate_checkout {
 
 export interface CreateCheckout_checkoutCreate {
   __typename: "CheckoutCreate";
-  errors: CreateCheckout_checkoutCreate_errors[];
+  checkoutErrorsAsList: CreateCheckout_checkoutCreate_checkoutErrorsAsList[];
   checkout: CreateCheckout_checkoutCreate_checkout | null;
 }
 

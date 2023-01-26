@@ -595,8 +595,20 @@ export interface UpdateCheckoutLine_checkoutLinesUpdate_checkout {
   availablePaymentGateways: UpdateCheckoutLine_checkoutLinesUpdate_checkout_availablePaymentGateways[];
 }
 
-export interface UpdateCheckoutLine_checkoutLinesUpdate_errors {
-  __typename: "CheckoutError";
+export interface UpdateCheckoutLine_checkoutLinesUpdate_checkoutErrorAsList_availability {
+  __typename: "AvailableQuantityType";
+  /**
+   * remaining qty
+   */
+  quantity: number | null;
+  /**
+   * variant id.
+   */
+  variants: string | null;
+}
+
+export interface UpdateCheckoutLine_checkoutLinesUpdate_checkoutErrorAsList {
+  __typename: "CheckoutErrorAsList";
   /**
    * The error code.
    */
@@ -610,6 +622,18 @@ export interface UpdateCheckoutLine_checkoutLinesUpdate_errors {
    * The error message.
    */
   message: string | null;
+  /**
+   * variant's available qty.
+   */
+  availableQuantity: string[] | null;
+  /**
+   * List of both varint IDs and it's availability.
+   */
+  availability: (UpdateCheckoutLine_checkoutLinesUpdate_checkoutErrorAsList_availability | null)[] | null;
+  /**
+   * List of varint IDs which causes the error.
+   */
+  variants: string[] | null;
 }
 
 export interface UpdateCheckoutLine_checkoutLinesUpdate {
@@ -618,7 +642,7 @@ export interface UpdateCheckoutLine_checkoutLinesUpdate {
    * An updated checkout.
    */
   checkout: UpdateCheckoutLine_checkoutLinesUpdate_checkout | null;
-  errors: UpdateCheckoutLine_checkoutLinesUpdate_errors[];
+  checkoutErrorAsList: UpdateCheckoutLine_checkoutLinesUpdate_checkoutErrorAsList[];
 }
 
 export interface UpdateCheckoutLine {
