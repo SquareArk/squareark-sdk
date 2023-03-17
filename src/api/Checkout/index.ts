@@ -436,7 +436,10 @@ export class SaleorCheckoutAPI extends ErrorListener {
   createPayment = async (input: CreatePaymentInput): CheckoutResponse => {
     const checkoutId = this.saleorState.checkout?.id;
     const billingAddress = this.saleorState.checkout?.billingAddress;
-    const amount = this.saleorState.summaryPrices?.totalPrice?.gross.amount;
+    const amount =
+      this.saleorState.summaryPrices?.totalPrice?.gross.currency === "USD"
+        ? this.saleorState.summaryPrices?.subtotalPrice?.gross.amount
+        : this.saleorState.summaryPrices?.totalPrice?.gross.amount;
 
     if (
       checkoutId &&
